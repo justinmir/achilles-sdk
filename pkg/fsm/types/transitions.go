@@ -116,7 +116,7 @@ func GetUnreadyResources(
 				unreadyResources = append(unreadyResources, o)
 			}
 			if !foundReadyFunc {
-				log.Warnf("Recource %T doesn't have readiness flag so it won't be ever considered ready", res)
+				log.Warnf("Recource %T with condition type %T doesn't have readiness flag so it won't be ever considered ready", res, o)
 			}
 		}
 	}
